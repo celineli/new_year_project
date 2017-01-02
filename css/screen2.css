@@ -92,13 +92,13 @@ body {
 .snowflake:hover {
   cursor: default; }
 
-.pulse2 {
-  -webkit-animation: pulse2 1s linear infinite;
-  -moz-animation: pulse2 1s linear infinite;
-  -ms-animation: pulse2 1s linear infinite;
-  animation: pulse2 1s linear infinite; }
+.pulse {
+  -webkit-animation: pulse 2s linear infinite;
+  -moz-animation: pulse 2s linear infinite;
+  -ms-animation: pulse 2s linear infinite;
+  animation: pulse 2s linear infinite; }
 
-@keyframes pulse2 {
+@keyframes pulse {
   0% {
     -webkit-transform: scale(1);
     -moz-transform: scale(1);
@@ -117,5 +117,21 @@ body {
     -o-transform: scale(1);
     -ms-transform: scale(1);
     transform: scale(1); } }
+circle {
+  fill: #00ADA5;
+  animation: logoColorChange 8s infinite; }
+@keyframes logoColorChange {
+  0% {
+    fill: #00ADA5; }
+  25% {
+    fill: #F7931E; }
+  50% {
+    fill: #CA16FF; }
+  75% {
+    fill: #D9E021; }
+  100% {
+    fill: #00ADA5; } }
+.font-color {
+  fill: #FFFFFF; }
 
 /*# sourceMappingURL=screen2.css.map */
