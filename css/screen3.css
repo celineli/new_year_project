@@ -1,0 +1,23 @@
+#image {
+	position: absolute;
+	width: 100vw;
+	height: 100vh;
+    animation-name: anim;
+    animation-duration: 5s;
+    animation-fill-mode: forwards;
+}
+
+video {
+	width: 100vw;
+	height: 100vh;
+}
+
+@keyframes anim {
+    from {}
+    60% {transform: none;}
+    to {transform: translate3d(0, -100%, 0); }
+}
+
+body {
+	cursor: pointer;
+}
