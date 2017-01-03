@@ -13,66 +13,22 @@ body {
   margin: 20px;
   padding: 20px;
   font-size: 2.5em;
-  font-family: "Pacifico", cursive;
+  font-family: "Lobster Two", cursive;
+  color: #3C405A;
   border-radius: 5px;
   display: none; }
 
 @media screen and (max-width: 640px) {
   #text-wrapper {
-    font-size: 1.5em; } }
-.rw-words {
-  display: inline;
-  text-indent: 10px; }
+    font-size: 1.8em; } }
 
-.wordslide span {
-  position: absolute;
-  opacity: 0;
-  overflow: hidden;
-  width: 100%;
-  color: #D9E021;
-  animation: wordSlide 14s linear infinite 0s;
-  text-shadow: 1px 1px 1px black; }
 
-.rw-words span:nth-child(2) {
-  animation-delay: 2s;
-  color: #00ADA5; }
-.rw-words span:nth-child(3) {
-  animation-delay: 4s;
-  color: #F7931E; }
-.rw-words span:nth-child(4) {
-  animation-delay: 6s;
-  color: #CA16FF; }
-.rw-words span:nth-child(5) {
-  animation-delay: 8s;
-  color: #D9E021; }
-.rw-words span:nth-child(6) {
-  animation-delay: 10s;
-  color: #00ADA5; }
-.rw-words span:nth-child(7) {
-  animation-delay: 12s;
-  color: #F7931E; }
-
-@keyframes wordSlide {
-  0% {
-    opacity: 1;
-    animation-timing-function: ease-in;
-    width: 0px; }
-  10% {
-    opacity: 0.3;
-    width: 0px; }
-  20% {
-    opacity: 1;
-    width: 100%; }
-  27% {
-    opacity: 0;
-    width: 100%; }
-  100% {
-    opacity: 0; } }
-#pix {
-  width: 100%;
-  height: auto;
-  margin: 5px 0px;
-  display: none; }
+@media screen and (max-width: 768px) {
+	.box {
+		margin-top: 0;
+		}
+	}
+	
 
 #snowflakeContainer {
   position: absolute;
@@ -98,6 +54,20 @@ body {
   -ms-animation: pulse 2s linear infinite;
   animation: pulse 2s linear infinite; }
 
+.slide {
+	animation: text-slide;
+	animation-duration: 2s;
+	animation-iteration-count: infinite;
+}
+
+@keyframes text-slide {
+	from {}
+	50%	{transform: translate3d(20%,0,0); opacity: 0;}
+	51%	{transform: translate3d(-40%,0,0);}
+	60%	{opacity: 0;}
+	to		{transform: none; opacity: 1;}
+	}
+	
 @keyframes pulse {
   0% {
     -webkit-transform: scale(1);
@@ -120,6 +90,25 @@ body {
 circle {
   fill: #00ADA5;
   animation: logoColorChange 8s infinite; }
+
+#word {
+	animation: textColorChange;
+	animation-duration: 8s;
+	animation-iteration-count: infinite;
+	text-shadow: 1px 1px 1px black;
+}
+@keyframes textColorChange {
+  0% {
+    color: #00ADA5; }
+  25% {
+    color: #F7931E; }
+  50% {
+    color: #CA16FF; }
+  75% {
+    color: #D9E021; }
+  100% {
+    color: #00ADA5; } }
+    
 @keyframes logoColorChange {
   0% {
     fill: #00ADA5; }
